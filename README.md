@@ -1,74 +1,27 @@
-# Data analysis
-- Document here the project: dBrellhqDRluptqS
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+Summary of the project
 
-Please document the project the better you can.
+A logistics and delivery startup wants to evaluate their customers satisfaction after facing multiple challenges in on-demand delivery during the pandemic.
 
-# Startup the project
+A sample of surveys* are given by the customer with the following details:
 
-The initial setup.
+Y = target attribute (Y) with values indicating 0 (unhappy) and 1 (happy) customers
+X1 = my order was delivered on time
+X2 = contents of my order was as I expected
+X3 = I ordered everything I wanted to order
+X4 = I paid a good price for my order
+X5 = I am satisfied with my courier
+X6 = the app makes ordering easy for me
+Attributes X1 to X6 indicate the responses for each question and have values from 1 to 5 where the smaller number indicates less and the higher number indicates more towards the answer.
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
+Files used in the repository
+jupyter notebook: analysis can be seen in the notebooks folder
+original data: has been deleted because of privacy reasons
 
-Unittest test:
-```bash
-make clean install test
-```
 
-Check for dBrellhqDRluptqS in gitlab.com/{group}.
-If your project is not set please add it:
+Conclusion
+Company target of 73% can't be achieved with the small amount of data provided. Removing features will only decrease the score and do feature engineering can create multicollinearity.
 
-- Create a new project on `gitlab.com/{group}/dBrellhqDRluptqS`
-- Then populate it:
+Score will increase as we have more data available or more questions added. Model selection could change by then
 
-```bash
-##   e.g. if group is "{group}" and project_name is "dBrellhqDRluptqS"
-git remote add origin git@github.com:{group}/dBrellhqDRluptqS.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-dBrellhqDRluptqS-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/dBrellhqDRluptqS` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/dBrellhqDRluptqS.git
-cd dBrellhqDRluptqS
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-dBrellhqDRluptqS-run
-```
+Acknowledgement/References
+Thanks to Apziva for providing the data
